@@ -1,7 +1,9 @@
 net.gtaun.shoebill
 net.gtaun.shoebill.amx
+net.gtaun.shoebill.amx.types
 net.gtaun.shoebill.constant
 net.gtaun.shoebill.data
+net.gtaun.shoebill.event.actor
 net.gtaun.shoebill.event.amx
 net.gtaun.shoebill.event.checkpoint
 net.gtaun.shoebill.event.destroyable
