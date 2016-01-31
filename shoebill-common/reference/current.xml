@@ -1,0 +1,5966 @@
+<api>
+<package name="net.gtaun.shoebill.common"
+>
+<class name="AbstractShoebillContext"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.shoebill.object.Destroyable">
+</implements>
+<constructor name="AbstractShoebillContext"
+ type="net.gtaun.shoebill.common.AbstractShoebillContext"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="addDestroyable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="destroyable" type="net.gtaun.shoebill.object.Destroyable">
+</parameter>
+</method>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="init"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isDestroyed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isInited"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onDestroy"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onInit"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="removeDestroyable"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="destroyable" type="net.gtaun.shoebill.object.Destroyable">
+</parameter>
+</method>
+<field name="eventManagerNode"
+ type="net.gtaun.util.event.EventManagerNode"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="parentEventManager"
+ type="net.gtaun.util.event.EventManager"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ColorUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="colorBlend"
+ return="net.gtaun.shoebill.data.Color"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="mainColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="destColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="alpha" type="int">
+</parameter>
+</method>
+<method name="hsbColor"
+ return="net.gtaun.shoebill.data.Color"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="hue" type="float">
+</parameter>
+<parameter name="saturation" type="float">
+</parameter>
+<parameter name="brightness" type="float">
+</parameter>
+<parameter name="alpha" type="int">
+</parameter>
+</method>
+</class>
+<class name="ConfigurablePlugin"
+ extends="net.gtaun.shoebill.resource.Plugin"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ConfigurablePlugin"
+ type="net.gtaun.shoebill.common.ConfigurablePlugin"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="configure"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+</method>
+</class>
+<interface name="Saveable"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="save"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="ShoebillContextManager"
+ extends="net.gtaun.shoebill.common.AbstractShoebillContext"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ShoebillContextManager"
+ type="net.gtaun.shoebill.common.ShoebillContextManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="net.gtaun.shoebill.common.AbstractShoebillContext">
+</parameter>
+</method>
+<method name="getContext"
+ return="ContextType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;ContextType&gt;">
+</parameter>
+</method>
+<method name="getContexts"
+ return="java.util.Set&lt;ContextType&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;ContextType&gt;">
+</parameter>
+</method>
+<method name="manage"
+ return="ContextType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="ContextType">
+</parameter>
+</method>
+<method name="onDestroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onInit"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+</class>
+<class name="StringUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="StringUtils"
+ type="net.gtaun.shoebill.common.StringUtils"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="convertStringForTextdraw"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="input" type="java.lang.String">
+</parameter>
+</method>
+</class>
+</package>
+<package name="net.gtaun.shoebill.common.command"
+>
+<class name="BeforeCheck"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="Command"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="CommandEntry"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CommandEntry"
+ type="net.gtaun.shoebill.common.command.CommandEntry"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="entry" type="net.gtaun.shoebill.common.command.CommandEntryInternal">
+</parameter>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getCategorie"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCommand"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHandler"
+ return="net.gtaun.shoebill.common.command.CommandEntryInternal.CommandHandlerInternal"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHelpMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParamNames"
+ return="java.lang.String[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParamTypes"
+ return="java.lang.Class&lt;?&gt;[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPath"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPriority"
+ return="short"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="handle"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="params" type="java.lang.Object[]">
+</parameter>
+</method>
+<method name="isCaseSensitive"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="CommandEntryInternal.CommandHandlerInternal"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="params" type="java.lang.Object[]">
+</parameter>
+</method>
+</interface>
+<class name="CommandGroup"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CommandGroup"
+ type="net.gtaun.shoebill.common.command.CommandGroup"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="containsChildGroup"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+</method>
+<method name="containsGroup"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+</method>
+<method name="getCommandEntries"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="entries" type="java.util.List&lt;net.gtaun.shoebill.common.command.CommandEntry&gt;">
+</parameter>
+<parameter name="curPath" type="java.lang.String">
+</parameter>
+</method>
+<method name="getCommandEntries"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="entries" type="java.util.List&lt;net.gtaun.shoebill.common.command.CommandEntry&gt;">
+</parameter>
+<parameter name="curPath" type="java.lang.String">
+</parameter>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</method>
+<method name="getMatchedCommands"
+ return="java.util.List&lt;org.apache.commons.lang3.tuple.Pair&lt;java.lang.String, net.gtaun.shoebill.common.command.CommandEntryInternal&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="processCommand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="processCommand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="paramText" type="java.lang.String">
+</parameter>
+</method>
+<method name="processCommand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+<parameter name="matchedCmds" type="java.util.List&lt;org.apache.commons.lang3.tuple.Pair&lt;java.lang.String, net.gtaun.shoebill.common.command.CommandEntryInternal&gt;&gt;">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="processCommand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+<parameter name="matchedCmds" type="java.util.List&lt;org.apache.commons.lang3.tuple.Pair&lt;java.lang.String, net.gtaun.shoebill.common.command.CommandEntryInternal&gt;&gt;">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="paramText" type="java.lang.String">
+</parameter>
+</method>
+<method name="registerChildGroup"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+<parameter name="childName" type="java.lang.String">
+</parameter>
+</method>
+<method name="registerCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
+</parameter>
+<parameter name="paramNames" type="java.lang.String[]">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
+</parameter>
+</method>
+<method name="registerCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
+</parameter>
+<parameter name="paramNames" type="java.lang.String[]">
+</parameter>
+<parameter name="helpMessage" type="java.lang.String">
+</parameter>
+<parameter name="categorie" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
+</parameter>
+</method>
+<method name="registerCommand"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
+</parameter>
+<parameter name="paramNames" type="java.lang.String[]">
+</parameter>
+<parameter name="helpMessage" type="java.lang.String">
+</parameter>
+<parameter name="categorie" type="java.lang.String">
+</parameter>
+<parameter name="priority" type="short">
+</parameter>
+<parameter name="caseSensitive" type="boolean">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
+</parameter>
+</method>
+<method name="registerCommands"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="objects" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="registerGroup"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+</method>
+<method name="replaceTypeParser"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;?&gt;">
+</parameter>
+<parameter name="function" type="java.util.function.Function&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method name="unregisterChildGroup"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+</method>
+<method name="unregisterGroup"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="group" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+</method>
+</class>
+<interface name="CommandHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="params" type="java.util.Queue&lt;java.lang.Object&gt;">
+</parameter>
+</method>
+</interface>
+<class name="CommandHelp"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="CustomCommand"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<interface name="CustomCommandHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="p" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="cmd" type="java.lang.String">
+</parameter>
+<parameter name="params" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class name="PlayerCommandManager"
+ extends="net.gtaun.shoebill.common.command.CommandGroup"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.shoebill.object.Destroyable">
+</implements>
+<constructor name="PlayerCommandManager"
+ type="net.gtaun.shoebill.common.command.PlayerCommandManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCommandEntries"
+ return="java.util.List&lt;net.gtaun.shoebill.common.command.CommandEntry&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCommandEntries"
+ return="java.util.List&lt;net.gtaun.shoebill.common.command.CommandEntry&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="path" type="java.lang.String">
+</parameter>
+</method>
+<method name="getUsageMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="getUsageMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+</method>
+<method name="installCommandHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="priority" type="net.gtaun.util.event.HandlerPriority">
+</parameter>
+</method>
+<method name="installTextHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="priority" type="net.gtaun.util.event.HandlerPriority">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+</method>
+<method name="isDestroyed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="processCommand"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+<parameter name="sendUsages" type="boolean">
+</parameter>
+</method>
+<method name="sendUsageMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="sendUsageMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+</method>
+<method name="setHelpMessageSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="helpMessageSupplier" type="net.gtaun.shoebill.common.command.PlayerCommandManager.HelpMessageSupplier">
+</parameter>
+</method>
+<method name="setUsageMessageSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="usageMessageSupplier" type="net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier">
+</parameter>
+</method>
+<method name="uninstallAllHandlers"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="DEFAULT_HELP_MESSAGE_SUPPLIER"
+ type="net.gtaun.shoebill.common.command.PlayerCommandManager.HelpMessageSupplier"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+<field name="DEFAULT_USAGE_MESSAGE_SUPPLIER"
+ type="net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<interface name="PlayerCommandManager.HelpMessageSupplier"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<interface name="PlayerCommandManager.UsageMessageSupplier"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="command" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+<parameter name="params" type="java.lang.String[]">
+</parameter>
+<parameter name="help" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+</package>
+<package name="net.gtaun.shoebill.common.dialog"
+>
+<class name="AbstractDialog"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getButtonCancel"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getButtonOk"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCaption"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getDialogId"
+ return="net.gtaun.shoebill.object.DialogId"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParentDialog"
+ return="net.gtaun.shoebill.common.dialog.AbstractDialog"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPlayer"
+ return="net.gtaun.shoebill.object.Player"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getStyle"
+ return="net.gtaun.shoebill.constant.DialogStyle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onClickCancel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="onClose"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="type" type="net.gtaun.shoebill.event.dialog.DialogCloseEvent.DialogCloseType">
+</parameter>
+</method>
+<method name="onShow"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="setButtonCancel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancel" type="java.lang.String">
+</parameter>
+</method>
+<method name="setButtonCancel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancelSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setButtonCancel"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancelSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="setButtonOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOk" type="java.lang.String">
+</parameter>
+</method>
+<method name="setButtonOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOkSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setButtonOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOkSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="setCaption"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+</method>
+<method name="setCaption"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="captionSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setCaption"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="setClickCancelHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="onClickCancelHandler" type="net.gtaun.shoebill.common.dialog.DialogHandler">
+</parameter>
+</method>
+<method name="setCloseHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="closeHandler" type="net.gtaun.shoebill.common.dialog.AbstractDialog.DialogCloseHandler">
+</parameter>
+</method>
+<method name="setParentDialog"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parentDialog" type="net.gtaun.shoebill.common.dialog.AbstractDialog">
+</parameter>
+</method>
+<method name="setShowHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="showHandler" type="net.gtaun.shoebill.common.dialog.DialogHandler">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="text" type="java.lang.String">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="showParentDialog"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="eventManagerNode"
+ type="net.gtaun.util.event.EventManagerNode"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="parentEventManager"
+ type="net.gtaun.util.event.EventManager"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="player"
+ type="net.gtaun.shoebill.object.Player"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="style"
+ type="net.gtaun.shoebill.constant.DialogStyle"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="AbstractDialog.AbstractDialogBuilder"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.AbstractDialog.AbstractDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="build"
+ return="DialogType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="buttonCancel"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancel" type="java.lang.String">
+</parameter>
+</method>
+<method name="buttonCancel"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancelSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="buttonCancel"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonCancelSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="buttonOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOk" type="java.lang.String">
+</parameter>
+</method>
+<method name="buttonOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOkSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="buttonOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="buttonOkSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="caption"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+</method>
+<method name="caption"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="captionSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="caption"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="onClickCancel"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.DialogHandler">
+</parameter>
+</method>
+<method name="onClose"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.AbstractDialog.DialogCloseHandler">
+</parameter>
+</method>
+<method name="onShow"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.DialogHandler">
+</parameter>
+</method>
+<method name="parentDialog"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="parent" type="net.gtaun.shoebill.common.dialog.AbstractDialog">
+</parameter>
+</method>
+<field name="dialog"
+ type="DialogType"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="AbstractDialog.DialogCloseHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClose"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.AbstractDialog">
+</parameter>
+<parameter name="type" type="net.gtaun.shoebill.event.dialog.DialogCloseEvent.DialogCloseType">
+</parameter>
+</method>
+</interface>
+<interface name="ConditionSupplier"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="condition" type="boolean">
+</parameter>
+</method>
+</interface>
+<interface name="DialogHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.AbstractDialog">
+</parameter>
+</method>
+</interface>
+<interface name="DialogTextSupplier"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="get"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.AbstractDialog">
+</parameter>
+</method>
+</interface>
+<class name="InputDialog"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</constructor>
+<constructor name="InputDialog"
+ type="net.gtaun.shoebill.common.dialog.InputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<method name="addLine"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.InputDialog.AbstractInputDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.InputDialog.AbstractInputDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</method>
+<method name="getMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isPasswordMode"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="inputText" type="java.lang.String">
+</parameter>
+</method>
+<method name="setClickOkHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.InputDialog.ClickOkHandler">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="InputDialog.AbstractInputDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog.AbstractDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractInputDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.InputDialog.AbstractInputDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="line"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="line" type="java.lang.String">
+</parameter>
+</method>
+<method name="message"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="message"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="onClickOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.InputDialog.ClickOkHandler">
+</parameter>
+</method>
+</class>
+<interface name="InputDialog.ClickOkHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClickOk"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.InputDialog">
+</parameter>
+<parameter name="text" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class name="InputDialog.InputDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.InputDialog.AbstractInputDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="ListDialog"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ListDialog"
+ type="net.gtaun.shoebill.common.dialog.ListDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getDisplayedItems"
+ return="java.util.List&lt;net.gtaun.shoebill.common.dialog.ListDialogItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getItemString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getItems"
+ return="java.util.List&lt;net.gtaun.shoebill.common.dialog.ListDialogItem&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+<method name="setClickOkHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialog.ClickOkHandler">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="displayedItems"
+ type="java.util.List"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="items"
+ type="java.util.List"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ListDialog.AbstractListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog.AbstractDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractListDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="execute"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="func" type="net.gtaun.shoebill.common.dialog.ListDialog.BuilderFunction&lt;DialogBuilderType&gt;">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="item"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</method>
+<method name="items"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="items" type="java.util.Collection&lt;net.gtaun.shoebill.common.dialog.ListDialogItem&gt;">
+</parameter>
+</method>
+<method name="onClickOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialog.ClickOkHandler">
+</parameter>
+</method>
+</class>
+<interface name="ListDialog.BuilderFunction"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="call"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="builder" type="Builder">
+</parameter>
+</method>
+</interface>
+<interface name="ListDialog.ClickOkHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClickOk"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.ListDialog">
+</parameter>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+</interface>
+<class name="ListDialog.ListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="ListDialogItem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</constructor>
+<constructor name="ListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="DataType">
+</parameter>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;DataType&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;DataType&gt;">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getCurrentDialog"
+ return="net.gtaun.shoebill.common.dialog.ListDialog"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getData"
+ return="java.lang.Object"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getItemText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isEnabled"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onItemSelect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setData"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="java.lang.Object">
+</parameter>
+</method>
+<method name="setItemEnabledSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<method name="setItemEnabledSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;?&gt;">
+</parameter>
+</method>
+<method name="setItemText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="setItemText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setItemText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;?&gt;">
+</parameter>
+</method>
+<method name="setSelectHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="setSelectHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;?&gt;">
+</parameter>
+</method>
+<field name="currentDialog"
+ type="net.gtaun.shoebill.common.dialog.ListDialog"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="data"
+ type="java.lang.Object"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="itemEnabledSupplier"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="itemTextSupplier"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="selectHandler"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ListDialogItem.AbstractItemBuilder"
+ extends="java.lang.Object"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractItemBuilder"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="item" type="ItemType">
+</parameter>
+</constructor>
+<method name="build"
+ return="ItemType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="data"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="java.lang.Object">
+</parameter>
+</method>
+<method name="enabled"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabledSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<method name="enabled"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="enabledSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemBooleanSupplier&lt;?&gt;">
+</parameter>
+</method>
+<method name="itemText"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="itemText"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="itemText"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemTextSupplier&lt;?&gt;">
+</parameter>
+</method>
+<method name="onSelect"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectSimpleHandler">
+</parameter>
+</method>
+<method name="onSelect"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItem.ItemSelectHandler&lt;?&gt;">
+</parameter>
+</method>
+<field name="item"
+ type="ItemType"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<interface name="ListDialogItem.ItemBooleanSupplier"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getBoolean"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="ItemData">
+</parameter>
+</method>
+</interface>
+<class name="ListDialogItem.ItemBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<interface name="ListDialogItem.ItemSelectHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onItemSelect"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+<parameter name="data" type="ItemData">
+</parameter>
+</method>
+</interface>
+<interface name="ListDialogItem.ItemSelectSimpleHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onItemSelect"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+</interface>
+<interface name="ListDialogItem.ItemTextSupplier"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getItemText"
+ return="java.lang.String"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="data" type="ItemData">
+</parameter>
+</method>
+</interface>
+<class name="ListDialogItemCheck"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ListDialogItemCheck"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="ListDialogItemCheck"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<constructor name="ListDialogItemCheck"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.ItemCheckBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCheckItemColorSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+</class>
+<class name="ListDialogItemCheck.CheckItem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="CheckItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</constructor>
+<constructor name="CheckItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</constructor>
+<constructor name="CheckItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<constructor name="CheckItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getItemText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isChecked"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setStatusSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<field name="checkedColor"
+ type="net.gtaun.shoebill.data.Color"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="itemText"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="ListDialogItemCheck.ItemCheckBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.ItemCheckBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checkItem" type="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.CheckItem">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.ItemCheckBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemCheck.ItemCheckBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+</class>
+<class name="ListDialogItemRadio"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ListDialogItemRadio"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="ListDialogItemRadio"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<constructor name="ListDialogItemRadio"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<method name="addItem"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getSelected"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onItemSelect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onItemSelect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem">
+</parameter>
+<parameter name="index" type="int">
+</parameter>
+</method>
+<method name="setRadioColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+<method name="setRadioItemSelectHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemSelectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemSelectHandler">
+</parameter>
+</method>
+<method name="setSelectedIndexSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectedSupplier" type="java.util.function.IntSupplier">
+</parameter>
+</method>
+</class>
+<class name="ListDialogItemRadio.ItemRadioBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="radioItem" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItemSelectHandler">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItemSelectHandler">
+</parameter>
+</method>
+<method name="item"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="onRadioItemSelect"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemSelectHandler">
+</parameter>
+</method>
+<method name="radioColor"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="uncheckedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+<method name="selectedIndex"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.ItemRadioBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="indexSupplier" type="java.util.function.IntSupplier">
+</parameter>
+</method>
+</class>
+<interface name="ListDialogItemRadio.ItemSelectHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onSelect"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialogItem" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio">
+</parameter>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem">
+</parameter>
+<parameter name="index" type="int">
+</parameter>
+</method>
+</interface>
+<class name="ListDialogItemRadio.RadioItem"
+ extends="java.lang.Object"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="RadioItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemString" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItemSelectHandler">
+</parameter>
+</constructor>
+<constructor name="RadioItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemString" type="java.lang.String">
+</parameter>
+<parameter name="checkedColor" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</constructor>
+<constructor name="RadioItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemString" type="java.lang.String">
+</parameter>
+<parameter name="selectHandler" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItemSelectHandler">
+</parameter>
+</constructor>
+<constructor name="RadioItem"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio.RadioItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemString" type="java.lang.String">
+</parameter>
+</constructor>
+<method name="getItemText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onSelect"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialogItem" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio">
+</parameter>
+</method>
+</class>
+<interface name="ListDialogItemRadio.RadioItemSelectHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onSelect"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialogItem" type="net.gtaun.shoebill.common.dialog.ListDialogItemRadio">
+</parameter>
+</method>
+</interface>
+<class name="ListDialogItemSwitch"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="ListDialogItemSwitch"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="ListDialogItemSwitch"
+ type="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="textSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch.ItemSwitchBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isSwitched"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setStatusSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="switchedSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<method name="setSwitchColor"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="on" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="off" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+<method name="setSwitchText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="on" type="java.lang.String">
+</parameter>
+<parameter name="off" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="ListDialogItemSwitch.ItemSwitchBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="statusSupplier"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch.ItemSwitchBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="statusSupplier" type="java.util.function.BooleanSupplier">
+</parameter>
+</method>
+<method name="switchColor"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch.ItemSwitchBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="on" type="net.gtaun.shoebill.data.Color">
+</parameter>
+<parameter name="off" type="net.gtaun.shoebill.data.Color">
+</parameter>
+</method>
+<method name="switchText"
+ return="net.gtaun.shoebill.common.dialog.ListDialogItemSwitch.ItemSwitchBuilder"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="on" type="java.lang.String">
+</parameter>
+<parameter name="off" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="MsgboxDialog"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="MsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.MsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<constructor name="MsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.MsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="MsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.MsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="messageSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</constructor>
+<constructor name="MsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.MsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</constructor>
+<method name="addLine"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.MsgboxDialog.AbstractMsgboxDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="setClickOkHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="onClickOkHandler" type="net.gtaun.shoebill.common.dialog.MsgboxDialog.ClickOkHandler">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messageSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</method>
+<method name="setMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="MsgboxDialog.AbstractMsgboxDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.AbstractDialog.AbstractDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractMsgboxDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.MsgboxDialog.AbstractMsgboxDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="line"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="line" type="java.lang.String">
+</parameter>
+</method>
+<method name="message"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</method>
+<method name="message"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</method>
+<method name="onClickOk"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.MsgboxDialog.ClickOkHandler">
+</parameter>
+</method>
+</class>
+<interface name="MsgboxDialog.ClickOkHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onClickOk"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.MsgboxDialog">
+</parameter>
+</method>
+</interface>
+<class name="MsgboxDialog.MsgboxDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.MsgboxDialog.AbstractMsgboxDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="PageListDialog"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PageListDialog"
+ type="net.gtaun.shoebill.common.dialog.PageListDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.PageListDialog.AbstractPageListDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getCurrentPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getItemsPerPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getListString"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="getMaxPage"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getNextPageItemText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPrevPageItemText"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="onPageTurn"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setCurrentPage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="currentPage" type="int">
+</parameter>
+</method>
+<method name="setItemsPerPage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemsPerPage" type="int">
+</parameter>
+</method>
+<method name="setNextPageItemText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="nextPageItemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="setPageTurnHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pageTurnHandler" type="net.gtaun.shoebill.common.dialog.PageListDialog.PageTurnHandler">
+</parameter>
+</method>
+<method name="setPrevPageItemText"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="prevPageItemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="show"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="page" type="int">
+</parameter>
+</method>
+</class>
+<class name="PageListDialog.AbstractPageListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractPageListDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.PageListDialog.AbstractPageListDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="itemsPerPage"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemsPerPage" type="int">
+</parameter>
+</method>
+<method name="nextPage"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+<method name="onPageTurn"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.shoebill.common.dialog.PageListDialog.PageTurnHandler">
+</parameter>
+</method>
+<method name="page"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="currentPage" type="int">
+</parameter>
+</method>
+<method name="prevPage"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="itemText" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<interface name="PageListDialog.PageTurnHandler"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="onPageTurn"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="dialog" type="net.gtaun.shoebill.common.dialog.PageListDialog">
+</parameter>
+</method>
+</interface>
+<class name="TabListDialog"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TabListDialog"
+ type="net.gtaun.shoebill.common.dialog.TabListDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TabListDialog.AbstractTabListDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="setHeader"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="index" type="int">
+</parameter>
+<parameter name="title" type="java.lang.String">
+</parameter>
+</method>
+<field name="MAX_HEADERS"
+ type="int"
+ transient="false"
+ volatile="false"
+ value="4"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
+<class name="TabListDialog.AbstractTabListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTabListDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.TabListDialog.AbstractTabListDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="header"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="index" type="int">
+</parameter>
+<parameter name="title" type="java.lang.String">
+</parameter>
+</method>
+</class>
+<class name="TabListDialogItem"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TabListDialogItem"
+ type="net.gtaun.shoebill.common.dialog.TabListDialogItem"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="addColumn"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="index" type="int">
+</parameter>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TabListDialogItem.AbstractTabItemBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="TabListDialogItem.AbstractTabItemBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialogItem.AbstractItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTabItemBuilder"
+ type="net.gtaun.shoebill.common.dialog.TabListDialogItem.AbstractTabItemBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="item" type="ItemType">
+</parameter>
+</constructor>
+<method name="column"
+ return="ItemBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="index" type="int">
+</parameter>
+<parameter name="item" type="net.gtaun.shoebill.common.dialog.ListDialogItem">
+</parameter>
+</method>
+</class>
+<class name="TabListDialogItem.TabItemBuilder"
+ extends="net.gtaun.shoebill.common.dialog.TabListDialogItem.AbstractTabItemBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="TimedInputDialog"
+ extends="net.gtaun.shoebill.common.dialog.InputDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</constructor>
+<constructor name="TimedInputDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TimedInputDialog.AbstractTimedInputDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TimedInputDialog.AbstractTimedInputDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="passwordMode" type="boolean">
+</parameter>
+</method>
+<method name="getBlockedTime"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBlockedTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="blockedTime" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedInputDialog.AbstractTimedInputDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.InputDialog.AbstractInputDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTimedInputDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.TimedInputDialog.AbstractTimedInputDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="blockedTime"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="seconds" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedInputDialog.TimedInputDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.TimedInputDialog.AbstractTimedInputDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="TimedListDialog"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TimedListDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedListDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TimedListDialog.AbstractTimedListDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getBlockedTime"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBlockedTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="blockedTime" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedListDialog.AbstractTimedListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.ListDialog.AbstractListDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTimedListDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.TimedListDialog.AbstractTimedListDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="blockedTime"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="seconds" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedListDialog.TimedListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.TimedListDialog.AbstractTimedListDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="TimedMsgboxDialog"
+ extends="net.gtaun.shoebill.common.dialog.MsgboxDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TimedMsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<constructor name="TimedMsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="caption" type="java.lang.String">
+</parameter>
+<parameter name="message" type="java.lang.String">
+</parameter>
+</constructor>
+<constructor name="TimedMsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+<parameter name="messageSupplier" type="java.util.function.Supplier&lt;java.lang.String&gt;">
+</parameter>
+</constructor>
+<constructor name="TimedMsgboxDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="captionSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+<parameter name="messageSupplier" type="net.gtaun.shoebill.common.dialog.DialogTextSupplier">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog.AbstractTimedMsgboxDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getBlockedTime"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBlockedTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="blockedTime" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedMsgboxDialog.AbstractTimedMsgboxDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.MsgboxDialog.AbstractMsgboxDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTimedMsgboxDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog.AbstractTimedMsgboxDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="blockedTime"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="seconds" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedMsgboxDialog.TimedMsgboxDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.TimedMsgboxDialog.AbstractTimedMsgboxDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+<class name="TimedPageListDialog"
+ extends="net.gtaun.shoebill.common.dialog.PageListDialog"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="TimedPageListDialog"
+ type="net.gtaun.shoebill.common.dialog.TimedPageListDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="create"
+ return="net.gtaun.shoebill.common.dialog.TimedPageListDialog.AbstractTimedPageListDialogBuilder&lt;?, ?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+<method name="getBlockedTime"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setBlockedTime"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="blockedTime" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedPageListDialog.AbstractTimedPageListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.PageListDialog.AbstractPageListDialogBuilder"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="AbstractTimedPageListDialogBuilder"
+ type="net.gtaun.shoebill.common.dialog.TimedPageListDialog.AbstractTimedPageListDialogBuilder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="dialog" type="DialogType">
+</parameter>
+</constructor>
+<method name="blockedTime"
+ return="DialogBuilderType"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="seconds" type="int">
+</parameter>
+</method>
+</class>
+<class name="TimedPageListDialog.TimedListDialogBuilder"
+ extends="net.gtaun.shoebill.common.dialog.TimedPageListDialog.AbstractTimedPageListDialogBuilder"
+ abstract="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</class>
+</package>
+<package name="net.gtaun.shoebill.common.player"
+>
+<class name="PlayerLifecycleHolder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.shoebill.object.Destroyable">
+</implements>
+<constructor name="PlayerLifecycleHolder"
+ type="net.gtaun.shoebill.common.player.PlayerLifecycleHolder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getObject"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="getObjects"
+ return="java.util.Collection&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="isDestroyed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="registerClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="registerClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="factory" type="net.gtaun.shoebill.common.player.PlayerLifecycleHolder.PlayerLifecycleObjectFactory&lt;T&gt;">
+</parameter>
+</method>
+<method name="registerClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="factory" type="net.gtaun.shoebill.common.player.PlayerLifecycleHolder.PlayerLifecycleObjectFactory&lt;T&gt;">
+</parameter>
+<parameter name="handlerRegisterer" type="net.gtaun.shoebill.common.player.PlayerLifecycleHolder.EventHandlerRegisterer">
+</parameter>
+</method>
+<method name="unregisterClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+<interface name="PlayerLifecycleHolder.EventHandlerRegisterer"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="register"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</method>
+</interface>
+<interface name="PlayerLifecycleHolder.PlayerLifecycleObjectFactory"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="create"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+</method>
+</interface>
+<class name="PlayerLifecycleObject"
+ extends="net.gtaun.shoebill.common.AbstractShoebillContext"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PlayerLifecycleObject"
+ type="net.gtaun.shoebill.common.player.PlayerLifecycleObject"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+</constructor>
+<method name="getPlayer"
+ return="net.gtaun.shoebill.object.Player"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="player"
+ type="net.gtaun.shoebill.object.Player"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+</package>
+<package name="net.gtaun.shoebill.common.vehicle"
+>
+<class name="VehicleLifecycleHolder"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.shoebill.object.Destroyable">
+</implements>
+<constructor name="VehicleLifecycleHolder"
+ type="net.gtaun.shoebill.common.vehicle.VehicleLifecycleHolder"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
+<method name="destroy"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getObject"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="getObjects"
+ return="java.util.Collection&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="isDestroyed"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="registerClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="registerClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="factory" type="net.gtaun.shoebill.common.vehicle.VehicleLifecycleHolder.VehicleLifecycleObjectFactory&lt;T&gt;">
+</parameter>
+</method>
+<method name="unregisterClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</class>
+<interface name="VehicleLifecycleHolder.VehicleLifecycleObjectFactory"
+ abstract="true"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="create"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+</method>
+</interface>
+<class name="VehicleLifecycleObject"
+ extends="net.gtaun.shoebill.common.AbstractShoebillContext"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="VehicleLifecycleObject"
+ type="net.gtaun.shoebill.common.vehicle.VehicleLifecycleObject"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="eventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+</constructor>
+<method name="getVehicle"
+ return="net.gtaun.shoebill.object.Vehicle"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="vehicle"
+ type="net.gtaun.shoebill.object.Vehicle"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="VehicleUtils"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getVehicleDriver"
+ return="net.gtaun.shoebill.object.Player"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+</method>
+<method name="getVehiclePassengers"
+ return="java.util.List&lt;net.gtaun.shoebill.object.Player&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+</method>
+<method name="isVehicleDriver"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="vehicle" type="net.gtaun.shoebill.object.Vehicle">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+</method>
+</class>
+</package>
+</api>
