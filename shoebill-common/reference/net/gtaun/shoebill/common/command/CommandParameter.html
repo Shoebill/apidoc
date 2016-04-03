@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  PlayerCommandManager.HelpMessageSupplier
+  CommandParameter
 
 
 | shoebill-common
@@ -165,7 +165,7 @@
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html">PlayerCommandManager.HelpMessageSupplier</a></li>
+          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html">PlayerCommandManager.HelpMessageSupplier</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.UsageMessageSupplier.html">PlayerCommandManager.UsageMessageSupplier</a></li>
       </ul>
     </li>
@@ -183,7 +183,7 @@
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/BeforeCheck.html">BeforeCheck</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/Command.html">Command</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandHelp.html">CommandHelp</a></li>
-          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CustomCommand.html">CustomCommand</a></li>
       </ul>
     </li>
@@ -227,9 +227,34 @@
 
 
 
+  
+   
+  
+  
+  
+  
+
 
 <div class="sum-details-links">
 
+
+Summary:
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
 
 </div><!-- end sum-details-links -->
 <div class="api-level">
@@ -247,15 +272,20 @@
 
 <div id="jd-header">
     public
-    static 
      
-    
-    interface
-<h1>PlayerCommandManager.HelpMessageSupplier</h1>
+     
+    abstract
+    @interface
+<h1>CommandParameter</h1>
 
 
 
   
+  
+      implements 
+      
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a> 
+      
   
   
 
@@ -270,7 +300,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">net.gtaun.shoebill.common.command.PlayerCommandManager.HelpMessageSupplier</td>
+        <td colspan="1" class="jd-inheritance-class-cell">net.gtaun.shoebill.common.command.CommandParameter</td>
     </tr>
     
 
@@ -284,6 +314,11 @@
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>Created by marvin on 15.02.16.
+ Copyright (c) 2015 Marvin Haschker. All rights reserved.
+</p>
 
 
 
@@ -337,9 +372,34 @@
 
 
 
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
 
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.annotation.Annotation" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.annotation.Annotation-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>
+
+<div id="inherited-methods-java.lang.annotation.Annotation">
+  <div id="inherited-methods-java.lang.annotation.Annotation-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.annotation.Annotation-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
 
 
 	 
@@ -350,21 +410,69 @@
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>&gt;
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html#get(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)">get</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)
+        <span class="sympad">annotationType</span>()
         
   </td></tr>
 
 
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            boolean
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            int
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
+        
+  </td></tr>
+
 
 </table>
+  </div>
+</div>
+</td></tr>
 
 
-
-
-
+</table>
 
 
 </div><!-- jd-descr (summary) -->
@@ -401,42 +509,6 @@
 
 <!-- ========= METHOD DETAIL ======== -->
 <!-- Public methdos -->
-
-<h2>Public Methods</h2>
-
-
-
-<a id="get(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)"></a>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-        abstract 
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-      <span class="sympad">get</span>
-      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
 
 
 

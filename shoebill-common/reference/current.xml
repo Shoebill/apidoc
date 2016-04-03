@@ -440,8 +440,8 @@
  visibility="public"
 >
 </method>
-<method name="getParamNames"
- return="java.lang.String[]"
+<method name="getParameterTypes"
+ return="java.lang.Class&lt;?&gt;[]"
  abstract="false"
  native="false"
  synchronized="false"
@@ -451,8 +451,8 @@
  visibility="public"
 >
 </method>
-<method name="getParamTypes"
- return="java.lang.Class&lt;?&gt;[]"
+<method name="getParameters"
+ return="net.gtaun.shoebill.common.command.CommandParameter[]"
  abstract="false"
  native="false"
  synchronized="false"
@@ -621,6 +621,73 @@
 <parameter name="commandText" type="java.lang.String">
 </parameter>
 </method>
+<method name="getNotFoundHandler"
+ return="net.gtaun.shoebill.common.command.CommandNotFoundHandler"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getTypeParser"
+ return="java.util.function.Function&lt;java.lang.String, java.lang.Object&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="getTypeParsers"
+ return="java.util.Map&lt;java.lang.Class&lt;?&gt;, java.util.function.Function&lt;java.lang.String, java.lang.Object&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getUsageMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="getUsageMessage"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+</method>
 <method name="processCommand"
  return="boolean"
  abstract="false"
@@ -722,9 +789,13 @@
 </parameter>
 <parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
 </parameter>
-<parameter name="paramNames" type="java.lang.String[]">
-</parameter>
 <parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
+</parameter>
+<parameter name="beforeCheckers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="customHandlers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="commandParameters" type="net.gtaun.shoebill.common.command.CommandParameter[]">
 </parameter>
 </method>
 <method name="registerCommand"
@@ -740,8 +811,6 @@
 <parameter name="command" type="java.lang.String">
 </parameter>
 <parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
-</parameter>
-<parameter name="paramNames" type="java.lang.String[]">
 </parameter>
 <parameter name="helpMessage" type="java.lang.String">
 </parameter>
@@ -749,6 +818,12 @@
 </parameter>
 <parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
 </parameter>
+<parameter name="beforeCheckers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="customHandlers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="commandParameters" type="net.gtaun.shoebill.common.command.CommandParameter[]">
+</parameter>
 </method>
 <method name="registerCommand"
  return="void"
@@ -763,8 +838,6 @@
 <parameter name="command" type="java.lang.String">
 </parameter>
 <parameter name="paramTypes" type="java.lang.Class&lt;?&gt;[]">
-</parameter>
-<parameter name="paramNames" type="java.lang.String[]">
 </parameter>
 <parameter name="helpMessage" type="java.lang.String">
 </parameter>
@@ -775,6 +848,12 @@
 <parameter name="caseSensitive" type="boolean">
 </parameter>
 <parameter name="handler" type="net.gtaun.shoebill.common.command.CommandHandler">
+</parameter>
+<parameter name="beforeCheckers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="customHandlers" type="java.util.List&lt;net.gtaun.shoebill.common.command.CustomCommandHandler&gt;">
+</parameter>
+<parameter name="commandParameters" type="net.gtaun.shoebill.common.command.CommandParameter[]">
 </parameter>
 </method>
 <method name="registerCommands"
@@ -808,7 +887,7 @@
  abstract="false"
  native="false"
  synchronized="false"
- static="false"
+ static="true"
  final="false"
  deprecated="not deprecated"
  visibility="public"
@@ -816,6 +895,64 @@
 <parameter name="type" type="java.lang.Class&lt;?&gt;">
 </parameter>
 <parameter name="function" type="java.util.function.Function&lt;java.lang.String, java.lang.Object&gt;">
+</parameter>
+</method>
+<method name="sendUsageMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+</method>
+<method name="sendUsageMessage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandText" type="java.lang.String">
+</parameter>
+<parameter name="prefix" type="java.lang.String">
+</parameter>
+</method>
+<method name="setNotFoundHandler"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="notFoundHandler" type="net.gtaun.shoebill.common.command.CommandNotFoundHandler">
+</parameter>
+</method>
+<method name="setUsageMessageSupplier"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="usageMessageSupplier" type="net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier">
 </parameter>
 </method>
 <method name="unregisterChildGroup"
@@ -869,6 +1006,42 @@
 </method>
 </interface>
 <class name="CommandHelp"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<interface name="CommandNotFoundHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handle"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="commandGroup" type="net.gtaun.shoebill.common.command.CommandGroup">
+</parameter>
+<parameter name="command" type="net.gtaun.shoebill.common.command.Command">
+</parameter>
+</method>
+</interface>
+<class name="CommandParameter"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -970,38 +1143,6 @@
 <parameter name="path" type="java.lang.String">
 </parameter>
 </method>
-<method name="getUsageMessage"
- return="java.lang.String"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="player" type="net.gtaun.shoebill.object.Player">
-</parameter>
-<parameter name="commandText" type="java.lang.String">
-</parameter>
-</method>
-<method name="getUsageMessage"
- return="java.lang.String"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="player" type="net.gtaun.shoebill.object.Player">
-</parameter>
-<parameter name="commandText" type="java.lang.String">
-</parameter>
-<parameter name="prefix" type="java.lang.String">
-</parameter>
-</method>
 <method name="installCommandHandler"
  return="void"
  abstract="false"
@@ -1041,57 +1182,6 @@
  visibility="public"
 >
 </method>
-<method name="processCommand"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="player" type="net.gtaun.shoebill.object.Player">
-</parameter>
-<parameter name="commandText" type="java.lang.String">
-</parameter>
-<parameter name="prefix" type="java.lang.String">
-</parameter>
-<parameter name="sendUsages" type="boolean">
-</parameter>
-</method>
-<method name="sendUsageMessage"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="player" type="net.gtaun.shoebill.object.Player">
-</parameter>
-<parameter name="commandText" type="java.lang.String">
-</parameter>
-</method>
-<method name="sendUsageMessage"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="player" type="net.gtaun.shoebill.object.Player">
-</parameter>
-<parameter name="commandText" type="java.lang.String">
-</parameter>
-<parameter name="prefix" type="java.lang.String">
-</parameter>
-</method>
 <method name="setHelpMessageSupplier"
  return="void"
  abstract="false"
@@ -1103,19 +1193,6 @@
  visibility="public"
 >
 <parameter name="helpMessageSupplier" type="net.gtaun.shoebill.common.command.PlayerCommandManager.HelpMessageSupplier">
-</parameter>
-</method>
-<method name="setUsageMessageSupplier"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="usageMessageSupplier" type="net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier">
 </parameter>
 </method>
 <method name="uninstallAllHandlers"
@@ -1194,13 +1271,9 @@
 >
 <parameter name="player" type="net.gtaun.shoebill.object.Player">
 </parameter>
-<parameter name="command" type="java.lang.String">
-</parameter>
 <parameter name="prefix" type="java.lang.String">
 </parameter>
-<parameter name="params" type="java.lang.String[]">
-</parameter>
-<parameter name="help" type="java.lang.String">
+<parameter name="command" type="net.gtaun.shoebill.common.command.CommandEntry">
 </parameter>
 </method>
 </interface>
@@ -1215,6 +1288,20 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<constructor name="AbstractDialog"
+ type="net.gtaun.shoebill.common.dialog.AbstractDialog"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="style" type="net.gtaun.shoebill.constant.DialogStyle">
+</parameter>
+<parameter name="player" type="net.gtaun.shoebill.object.Player">
+</parameter>
+<parameter name="parentEventManager" type="net.gtaun.util.event.EventManager">
+</parameter>
+</constructor>
 <method name="destroy"
  return="void"
  abstract="false"
@@ -2057,6 +2144,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="event" type="net.gtaun.shoebill.event.dialog.DialogResponseEvent">
+</parameter>
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
 <parameter name="inputText" type="java.lang.String">
 </parameter>
 </method>
@@ -2456,6 +2556,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="net.gtaun.shoebill.event.dialog.DialogResponseEvent">
+</parameter>
 </method>
 <method name="onClickOk"
  return="void"
@@ -4308,6 +4421,19 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="onClickOk"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="net.gtaun.shoebill.event.dialog.DialogResponseEvent">
+</parameter>
 </method>
 <method name="onClickOk"
  return="void"

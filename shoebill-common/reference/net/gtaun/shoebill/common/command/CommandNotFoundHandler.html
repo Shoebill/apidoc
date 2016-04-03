@@ -57,7 +57,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico" />
 <title>
 
-  PlayerCommandManager.HelpMessageSupplier
+  CommandNotFoundHandler
 
 
 | shoebill-common
@@ -163,9 +163,9 @@
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a></li>
-          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html">PlayerCommandManager.HelpMessageSupplier</a></li>
+          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html">PlayerCommandManager.HelpMessageSupplier</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.UsageMessageSupplier.html">PlayerCommandManager.UsageMessageSupplier</a></li>
       </ul>
     </li>
@@ -247,11 +247,11 @@
 
 <div id="jd-header">
     public
-    static 
+     
      
     
     interface
-<h1>PlayerCommandManager.HelpMessageSupplier</h1>
+<h1>CommandNotFoundHandler</h1>
 
 
 
@@ -270,7 +270,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">net.gtaun.shoebill.common.command.PlayerCommandManager.HelpMessageSupplier</td>
+        <td colspan="1" class="jd-inheritance-class-cell">net.gtaun.shoebill.common.command.CommandNotFoundHandler</td>
     </tr>
     
 
@@ -284,6 +284,11 @@
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>Created by marvin on 19.03.16.
+ Copyright (c) 2016 Marvin Haschker. All rights reserved.
+</p>
 
 
 
@@ -350,10 +355,10 @@
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+            boolean
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html#get(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)">get</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html#handle(net.gtaun.shoebill.object.Player, net.gtaun.shoebill.common.command.CommandGroup, net.gtaun.shoebill.common.command.Command)">handle</a></span>(Player player, <a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html">CommandGroup</a> commandGroup, <a href="../../../../../net/gtaun/shoebill/common/command/Command.html">Command</a> command)
         
   </td></tr>
 
@@ -406,7 +411,7 @@
 
 
 
-<a id="get(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)"></a>
+<a id="handle(net.gtaun.shoebill.object.Player, net.gtaun.shoebill.common.command.CommandGroup, net.gtaun.shoebill.common.command.Command)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -416,10 +421,10 @@
          
         abstract 
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        boolean
       </span>
-      <span class="sympad">get</span>
-      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
+      <span class="sympad">handle</span>
+      <span class="normal">(Player player, <a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html">CommandGroup</a> commandGroup, <a href="../../../../../net/gtaun/shoebill/common/command/Command.html">Command</a> command)</span>
     </h4>
       <div class="api-level">
         <div>

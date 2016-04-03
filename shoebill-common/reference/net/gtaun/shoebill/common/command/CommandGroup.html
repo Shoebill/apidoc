@@ -163,6 +163,7 @@
     <li><h2>Interfaces</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a></li>
+          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.HelpMessageSupplier.html">PlayerCommandManager.HelpMessageSupplier</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.UsageMessageSupplier.html">PlayerCommandManager.UsageMessageSupplier</a></li>
@@ -182,6 +183,7 @@
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/BeforeCheck.html">BeforeCheck</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/Command.html">Command</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandHelp.html">CommandHelp</a></li>
+          <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter</a></li>
           <li class="api apilevel-"><a href="../../../../../net/gtaun/shoebill/common/command/CustomCommand.html">CustomCommand</a></li>
       </ul>
     </li>
@@ -484,6 +486,86 @@ Summary:
             
             
             
+            <a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#getNotFoundHandler()">getNotFoundHandler</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#getTypeParser(java.lang.Class<?>)">getTypeParser</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; type)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;,&nbsp;Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt;&gt;
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#getTypeParsers()">getTypeParsers</a></span>()
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#getUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)">getUsageMessage</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> prefix)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#getUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String)">getUsageMessage</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
             boolean
         </td>
         <td class="jd-linkcol" width="100%">
@@ -493,7 +575,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -509,7 +591,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -525,22 +607,6 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol">
-            
-            
-            
-            
-            
-            void
-        </td>
-        <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], java.lang.String, java.lang.String, short, boolean, net.gtaun.shoebill.common.command.CommandHandler)">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, short priority, boolean caseSensitive, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)
-        
-  </td></tr>
-
-
-	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
@@ -551,7 +617,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], net.gtaun.shoebill.common.command.CommandHandler)">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String, java.lang.String, net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)
         
   </td></tr>
 
@@ -567,13 +633,29 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], java.lang.String, java.lang.String, net.gtaun.shoebill.common.command.CommandHandler)">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String, java.lang.String, short, boolean, net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])">registerCommand</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, short priority, boolean caseSensitive, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -589,7 +671,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -605,6 +687,22 @@ Summary:
 
 
 	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#replaceTypeParser(java.lang.Class<?>, java.util.function.Function<java.lang.String, java.lang.Object>)">replaceTypeParser</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; type, Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt; function)
+        
+  </td></tr>
+
+
+	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">
             
@@ -615,7 +713,7 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#replaceTypeParser(java.lang.Class<?>, java.util.function.Function<java.lang.String, java.lang.Object>)">replaceTypeParser</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; type, Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt; function)
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#sendUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String)">sendUsageMessage</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText)
         
   </td></tr>
 
@@ -631,13 +729,61 @@ Summary:
             void
         </td>
         <td class="jd-linkcol" width="100%">
-        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#unregisterChildGroup(net.gtaun.shoebill.common.command.CommandGroup)">unregisterChildGroup</a></span>(<a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html">CommandGroup</a> group)
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#sendUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)">sendUsageMessage</a></span>(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> prefix)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#setNotFoundHandler(net.gtaun.shoebill.common.command.CommandNotFoundHandler)">setNotFoundHandler</a></span>(<a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a> notFoundHandler)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#setUsageMessageSupplier(net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier)">setUsageMessageSupplier</a></span>(<a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.UsageMessageSupplier.html">PlayerCommandManager.UsageMessageSupplier</a> usageMessageSupplier)
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html#unregisterChildGroup(net.gtaun.shoebill.common.command.CommandGroup)">unregisterChildGroup</a></span>(<a href="../../../../../net/gtaun/shoebill/common/command/CommandGroup.html">CommandGroup</a> group)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol">
             
             
@@ -1099,6 +1245,161 @@ From class
 </div>
 
 
+<a id="getNotFoundHandler()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a>
+      </span>
+      <span class="sympad">getNotFoundHandler</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getTypeParser(java.lang.Class<?>)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt;
+      </span>
+      <span class="sympad">getTypeParser</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; type)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getTypeParsers()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;,&nbsp;Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt;&gt;
+      </span>
+      <span class="sympad">getTypeParsers</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getUsageMessage</span>
+      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> prefix)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="getUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getUsageMessage</span>
+      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <a id="processCommand(net.gtaun.shoebill.object.Player, java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
@@ -1192,7 +1493,7 @@ From class
 </div>
 
 
-<a id="registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], java.lang.String, java.lang.String, short, boolean, net.gtaun.shoebill.common.command.CommandHandler)"></a>
+<a id="registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String, java.lang.String, net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1205,7 +1506,7 @@ From class
         void
       </span>
       <span class="sympad">registerCommand</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, short priority, boolean caseSensitive, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1223,7 +1524,7 @@ From class
 </div>
 
 
-<a id="registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], net.gtaun.shoebill.common.command.CommandHandler)"></a>
+<a id="registerCommand(java.lang.String, java.lang.Class<?>[], net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1236,7 +1537,7 @@ From class
         void
       </span>
       <span class="sympad">registerCommand</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1254,7 +1555,7 @@ From class
 </div>
 
 
-<a id="registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String[], java.lang.String, java.lang.String, net.gtaun.shoebill.common.command.CommandHandler)"></a>
+<a id="registerCommand(java.lang.String, java.lang.Class<?>[], java.lang.String, java.lang.String, short, boolean, net.gtaun.shoebill.common.command.CommandHandler, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, java.util.List<net.gtaun.shoebill.common.command.CustomCommandHandler>, net.gtaun.shoebill.common.command.CommandParameter[])"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1267,7 +1568,7 @@ From class
         void
       </span>
       <span class="sympad">registerCommand</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> paramNames, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> command, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class[]</a>&lt;?&gt; paramTypes, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> helpMessage, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> categorie, short priority, boolean caseSensitive, <a href="../../../../../net/gtaun/shoebill/common/command/CommandHandler.html">CommandHandler</a> handler, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; beforeCheckers, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../../net/gtaun/shoebill/common/command/CustomCommandHandler.html">CustomCommandHandler</a>&gt; customHandlers, <a href="../../../../../net/gtaun/shoebill/common/command/CommandParameter.html">CommandParameter[]</a> commandParameters)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1353,7 +1654,7 @@ From class
     <h4 class="jd-details-title">
       <span class="normal">
         public 
-         
+        static 
          
          
          
@@ -1361,6 +1662,130 @@ From class
       </span>
       <span class="sympad">replaceTypeParser</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; type, Function&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>,&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>&gt; function)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="sendUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">sendUsageMessage</span>
+      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="sendUsageMessage(net.gtaun.shoebill.object.Player, java.lang.String, java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">sendUsageMessage</span>
+      <span class="normal">(Player player, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> commandText, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> prefix)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="setNotFoundHandler(net.gtaun.shoebill.common.command.CommandNotFoundHandler)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setNotFoundHandler</span>
+      <span class="normal">(<a href="../../../../../net/gtaun/shoebill/common/command/CommandNotFoundHandler.html">CommandNotFoundHandler</a> notFoundHandler)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<a id="setUsageMessageSupplier(net.gtaun.shoebill.common.command.PlayerCommandManager.UsageMessageSupplier)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">setUsageMessageSupplier</span>
+      <span class="normal">(<a href="../../../../../net/gtaun/shoebill/common/command/PlayerCommandManager.UsageMessageSupplier.html">PlayerCommandManager.UsageMessageSupplier</a> usageMessageSupplier)</span>
     </h4>
       <div class="api-level">
         <div>
