@@ -1,0 +1,621 @@
+<api>
+<package name="net.gtaun.util.event"
+>
+<class name="AbstractHandlerEntry"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.util.event.HandlerEntry">
+</implements>
+<constructor name="AbstractHandlerEntry"
+ type="net.gtaun.util.event.AbstractHandlerEntry"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;? extends net.gtaun.util.event.Event&gt;">
+</parameter>
+<parameter name="attentions" type="net.gtaun.util.event.Attentions">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;?&gt;">
+</parameter>
+<parameter name="priority" type="short">
+</parameter>
+</constructor>
+<method name="getAttentions"
+ return="net.gtaun.util.event.Attentions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHandler"
+ return="net.gtaun.util.event.EventHandler&lt;?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPriority"
+ return="short"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="java.lang.Class&lt;? extends net.gtaun.util.event.Event&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="isCanceled"
+ type="boolean"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
+<class name="Attentions"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="all"
+ return="net.gtaun.util.event.Attentions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="clazz"
+ return="net.gtaun.util.event.Attentions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clz" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="create"
+ return="net.gtaun.util.event.Attentions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="object"
+ return="net.gtaun.util.event.Attentions"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="target" type="java.lang.Object">
+</parameter>
+</method>
+</class>
+<class name="Event"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="Event"
+ type="net.gtaun.util.event.Event"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</constructor>
+<method name="interrupt"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="isInterrupted"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+</class>
+<interface name="EventHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handleEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="E">
+</parameter>
+<exception name="Throwable" type="java.lang.Throwable">
+</exception>
+</method>
+</interface>
+<interface name="EventManager"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="createChildNode"
+ return="net.gtaun.util.event.EventManagerNode"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="dispatchEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="event" type="E">
+</parameter>
+<parameter name="objects" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="dispatchEvent"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="handler" type="net.gtaun.util.event.ThrowableHandler">
+</parameter>
+<parameter name="event" type="E">
+</parameter>
+<parameter name="objects" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="priority" type="net.gtaun.util.event.HandlerPriority">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="priority" type="short">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="priority" type="net.gtaun.util.event.HandlerPriority">
+</parameter>
+<parameter name="concerns" type="net.gtaun.util.event.Attentions">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="priority" type="short">
+</parameter>
+<parameter name="concerns" type="net.gtaun.util.event.Attentions">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+</interface>
+<interface name="EventManagerNode"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.util.event.EventManager">
+</implements>
+<method name="cancelAll"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="destroy"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getParent"
+ return="net.gtaun.util.event.EventManager"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="isDestroy"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="EventManagerRoot"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="net.gtaun.util.event.EventManager">
+</implements>
+<constructor name="EventManagerRoot"
+ type="net.gtaun.util.event.EventManagerRoot"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="createChildNode"
+ return="net.gtaun.util.event.EventManagerNode"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="dispatchEvent"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="throwableHandler" type="net.gtaun.util.event.ThrowableHandler">
+</parameter>
+<parameter name="event" type="T">
+</parameter>
+<parameter name="objects" type="java.lang.Object...">
+</parameter>
+</method>
+<method name="registerHandler"
+ return="net.gtaun.util.event.HandlerEntry"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="type" type="java.lang.Class&lt;E&gt;">
+</parameter>
+<parameter name="priority" type="short">
+</parameter>
+<parameter name="concerns" type="net.gtaun.util.event.Attentions">
+</parameter>
+<parameter name="handler" type="net.gtaun.util.event.EventHandler&lt;E&gt;">
+</parameter>
+</method>
+</class>
+<interface name="HandlerEntry"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="cancel"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getAttentions"
+ return="net.gtaun.util.event.Attentions"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getEventManager"
+ return="net.gtaun.util.event.EventManager"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getHandler"
+ return="net.gtaun.util.event.EventHandler&lt;?&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getPriority"
+ return="short"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="getType"
+ return="java.lang.Class&lt;? extends net.gtaun.util.event.Event&gt;"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<class name="HandlerPriority"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getValue"
+ return="short"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="valueOf"
+ return="net.gtaun.util.event.HandlerPriority"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="net.gtaun.util.event.HandlerPriority[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<interface name="Interruptable"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="interrupt"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
+<interface name="ThrowableHandler"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="handleThrowable"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="throwable" type="java.lang.Throwable">
+</parameter>
+</method>
+</interface>
+</package>
+</api>
